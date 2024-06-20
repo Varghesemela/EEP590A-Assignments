@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+	echo "Usage: ./submit {filename.cu} {assignment_num}"
+	exit 1
+fi
+
+chmod 700 $1
+cp -f $1 /work1/sadasivan/csep590_class_root/csep590_class/all_sub/$USER/assignment-$2/$USER-assignment-$2.cu
+chmod 777 /work1/sadasivan/csep590_class_root/csep590_class/all_sub/$USER/assignment-$2/$USER-assignment-$2.cu
